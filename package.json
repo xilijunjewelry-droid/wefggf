@@ -1,0 +1,12 @@
+{  
+  "name": "conch-ai-app",  
+  "version": "1.0.0",  
+  "description": "A Python-based Conch AI application.",  
+  "main": "main.py",  
+  "scripts": {  
+    "start": "python main.py"  
+  },  
+  "dependencies": {  
+    "Flask": "^2.0.0"  
+  }  
+}  
