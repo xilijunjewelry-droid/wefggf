@@ -1,36 +1,37 @@
-# Conch AI Application
+# 珊瑚Ai（Demo）
 
-## Overview
-Conch AI is a cutting-edge application designed to leverage artificial intelligence to enhance user experiences. This documentation provides comprehensive details about its features, setup instructions, and usage examples.
+一个基于 Flask 的智能聊天应用示例，界面风格参考海螺 AI，包含：
 
-## Features
-- **AI-Powered Analytics**: Offers insights derived from user data by utilizing advanced algorithms.
-- **User-Friendly Interface**: Designed with the end-user in mind, featuring an intuitive layout that facilitates easy navigation.
-- **Customization Options**: Allows users to customize settings according to their preferences.
-- **Cross-Platform Compatibility**: Can be used on various operating systems without any issues.
+- 深色聊天主界面
+- 左侧栏历史会话列表
+- 语音按钮（预留交互）
+- `/api/chat` 对话接口
+- `/api/reset` 重置会话接口
 
-## Setup Instructions
-1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/xilijunjewelry-droid/wefggf.git
-   cd wefggf
-   ```
-2. **Install Dependencies**
-   Make sure you have the necessary dependencies installed. Run:
-   ```bash
-   npm install
-   ```
-3. **Run the Application**
-   To start the server, run:
-   ```bash
-   npm start
-   ```
+## 启动方式
 
-## Usage Examples
-- **Starting the Application**: After installation, use the command line and navigate to the project directory and then run `npm start`.
-- **Accessing the Interface**: Open your browser and go to `http://localhost:3000` to access the Conch AI interface.
+```bash
+python main.py
+```
 
-For more advanced usage, refer to the `docs/advanced_usage.md` file after installation. 
+默认地址：`http://127.0.0.1:5000`
 
-## Conclusion
-Conch AI promises to deliver a seamless user experience with its powerful AI features. For any issues or feature requests, please reach out via the issue tracker on GitHub.
+## API
+
+### `POST /api/chat`
+
+请求：
+
+```json
+{ "message": "帮我拆解今天的任务计划" }
+```
+
+响应：
+
+```json
+{ "reply": "...", "history": [{"role":"user","content":"..."}] }
+```
+
+### `POST /api/reset`
+
+重置历史对话。
