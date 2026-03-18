@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>珊瑚Ai - 智能助手</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="logo">珊</div>
+          <div>
+            <h1>珊瑚Ai</h1>
+            <p>你的灵感协作助手</p>
+          </div>
+        </div>
+
+        <button id="newSessionBtn" class="ghost-btn">+ 新建会话</button>
+
+        <section class="history">
+          <h2>历史会话</h2>
+          <ul id="sessionList"></ul>
+        </section>
+      </aside>
+
+      <section class="chat-panel">
+        <header class="chat-header">
+          <div>
+            <h2>珊瑚Ai 对话</h2>
+            <span class="status-dot"></span><small>在线</small>
+          </div>
+          <button id="resetBtn" class="warn-btn">重置上下文</button>
+        </header>
+
+        <section id="chat" class="chat"></section>
+
+        <form id="composer" class="composer">
+          <button type="button" id="voiceBtn" class="voice-btn" title="语音输入">🎙️</button>
+          <input id="input" placeholder="输入消息，比如：请帮我拆解今天的任务计划" required />
+          <button type="submit" class="send-btn">发送</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
